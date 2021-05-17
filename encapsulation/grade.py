@@ -10,12 +10,6 @@ class Grade:
     def avg(self):
         return self.sum() / 3
 
-    def addgrade(self, kor, eng, math):
-        return kor+eng+math
-
-    def addgrade(self):
-        return g.kor+g.eng+g.math
-
 if __name__ == '__main__':
     g = Grade()
     g.setgrade(76, 90, 80)
