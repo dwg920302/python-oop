@@ -25,20 +25,19 @@ class BmiCalculator(object):
 
     def get_grade(self):
         bmi = self.get_Bmi()
-        if(bmi <= 18.5):
+        if bmi <= 18.5:
             grade = '저체중'
-        elif(bmi <= 23):
+        elif bmi <= 23 :
             grade = '정상'
-        elif(bmi <= 25):
+        elif bmi <= 25 :
             grade = '과체중'
-        elif(bmi <= 30):
+        elif bmi <= 30 :
             grade = '경도 비만'
-        elif(bmi <= 35):
+        elif bmi <= 35 :
             grade = '중도 비만'
         else:
             grade = '고도 비만'
         return grade
-
 
     @staticmethod
     def main():
