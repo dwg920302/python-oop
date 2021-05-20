@@ -2,22 +2,7 @@ import random
 
 
 def rannum():
-    return f'{random.randint(0, 999)}-{random.randint(0, 99)}-{random.randint(0, 999999)}'
-    # 자리수가 줄어들면 길이가 줄어듬;
-
-
-def rannum2(count):
-    ran = random.randint(0, pow(10, count)-1)
-    num = ''
-    if count>1:
-        while count>1:
-            num += '0'
-    num += ran
-    return ran
-
-
-def ran_num():
-
+    return "{0:0>3}".format(f'{random.randint(0, 999)}')+'-'+"{0:0>2}".format(f'{random.randint(0, 99)}')+'-'+"{0:0>6}".format(f'{random.randint(0, 999999)}')
 
 
 class Account(object):

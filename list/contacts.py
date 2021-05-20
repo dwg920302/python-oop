@@ -32,7 +32,9 @@ class Contacts(object):
                 # 지워버리고 해당 내용물을 다시 추가하는 것으로 수정
                 edit_name = input('주소록의 내용물을 변경할 사용자 이름을 입력 -> ')
                 for i, j in enumerate(ls):
-                    if
+                    if j.name == edit_name:
+                        del ls[i]
+                        ls.append(Contacts(edit_name, input('연락처 입력 -> '), input('이메일 입력 -> '), input('주소 입력 -> ')))
             else:
                 print('[System] 잘못된 접근')
 
