@@ -7,13 +7,13 @@ def rannum():
 
 class Account(object):
     def __init__(self, client, balance):
-        self.bank = 'SC은행'
+        self.BANK = 'SC은행'
         self.client = client
         self.number = rannum()
         self.balance = balance
 
     def get_account(self):
-        return f'은행={self.bank} / 예금주={self.client} / 계좌번호={self.number} / 잔액={self.balance}'
+        return f'은행={self.BANK} / 예금주={self.client} / 계좌번호={self.number} / 잔액={self.balance}'
 
     @staticmethod
     def main():
