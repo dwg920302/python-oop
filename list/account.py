@@ -6,8 +6,10 @@ def rannum():
 
 
 class Account(object):
+
+    BANK = 'SC은행'
+
     def __init__(self, client, balance):
-        self.BANK = 'SC은행'
         self.client = client
         self.number = rannum()
         self.balance = balance
