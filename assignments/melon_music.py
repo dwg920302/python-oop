@@ -10,9 +10,8 @@ class MelonMusic(object):
     url = 'https://www.melon.com/chart/index.htm?dayTime=2021052417'
     header = {'User-Agent': 'Mozilla/5.0'}  # 저는 봇이 아닙니다 준비과정 01
 
-    @staticmethod
-    def get_ranking(category, ct_number):
-        modifier01 = urllib.request.Request(MelonMusic.url, headers=MelonMusic.header)  # 저는 봇이 아닙니다 준비과정 02
+    def scrap_ranking(self, category, ct_number):
+        modifier01 = urllib.request.Request(self.url, headers=self.header)  # 저는 봇이 아닙니다 준비과정 02
         soup = BeautifulSoup(urlopen(modifier01), "lxml")
         cnt = 0
         print(f'----------[{category} RANKING]----------')
@@ -26,8 +25,8 @@ class MelonMusic(object):
         while 1:
             menu = input('[MENU]\n1 = get Ranking / 2 = ??? / 0 = Exit')
             if menu == '1':
-                MelonMusic.get_ranking("SONG", 1)
-                MelonMusic.get_ranking("ARTIST", 2)
+                melon.scrap_ranking("SONG", 1)
+                melon.scrap_ranking("ARTIST", 2)
             elif menu == '2':
                 pass
             elif menu == '0':

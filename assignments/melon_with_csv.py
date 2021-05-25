@@ -5,7 +5,7 @@ from urllib.request import urlopen
 
 
 class MelonMusicA(object):
-    url = 'https://www.melon.com/chart/index.htm?dayTime=2021052417'
+    url = 'https://www.melon.com/chart/index.htm?dayTime=2021052508'
     header = {'User-Agent': 'Mozilla/5.0'}  # 저는 봇이 아닙니다 준비과정 01
 
     @staticmethod
